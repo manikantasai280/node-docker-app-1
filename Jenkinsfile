@@ -29,7 +29,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
                     sh 'echo $PASS | docker login -u $USER --password-stdin'
-                    sh 'docker push testcaseleetcode/node-docker-app:0.0.1'
+                    sh 'docker push manikantasai280/node-docker-app:0.0.1'
                 }
             }
         }
